@@ -1,0 +1,82 @@
+\documentclass[
+  12pt,
+  openright,
+  twoside,
+  a4paper,
+  english,
+  brazil
+]{abntex2}
+
+% Configurações de pacotes utilizados
+
+\usepackage{lmodern}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lastpage}
+\usepackage{indentfirst}
+\usepackage{color}
+\usepackage{graphicx}
+\usepackage{adjustbox}
+\usepackage{microtype}
+\usepackage[brazilian, hyperpageref]{backref}
+\usepackage[alf]{abntex2cite}
+\renewcommand{\backrefpagesname}
+\renewcommand{\backref}{}
+\renewcommand*{\backrefalt}[4]{}
+
+% Dados para capa e folha de rosto
+
+\titulo{Desenvolvimento de Aplicações em Java e\\Conceitos de UI e UX}
+\autor{Pedro Felipe Froes Silva}
+\local{Belo Horizonte}
+\data{2017}
+\orientador{Kécia Aline Marques Ferreira}
+\coorientador{Avenue Code Desenvolvimento e Comércio de Softwares Ltda}
+\instituicao{
+  Centro Federal de Educação Tecnológica de Minas Gerais
+  \par
+  Departamento de Computação
+  \par
+  Curso de Engenharia de Computação
+}
+\tipotrabalho{Relatório}
+\preambulo{Relatório apresentado ao Curso de Engenharia de Computação do Centro Federal de Educação Tecnológica de Minas Gerais, como requisito parcial para a aprovação na disciplina Estágio Supervisionado.}
+
+% Configurações do PDF gerado
+
+\definecolor{blue}{RGB}{41,5,195}
+\makeatletter
+\hypersetup{
+  pdftitle={\@title},
+	pdfauthor={\@author},
+  pdfsubject={\imprimirpreambulo},
+  pdfcreator={LaTeX with abnTeX2},
+	pdfkeywords={estágio supervisionado}{java}{ui}{ux},
+	colorlinks=true,
+  linkcolor=blue,
+  citecolor=blue,
+  filecolor=magenta,
+  urlcolor=blue,
+  bookmarksdepth=4
+}
+\makeatother
+\setlength{\parindent}{1.3cm}
+\setlength{\parskip}{0.2cm}
+\interfootnotelinepenalty=10000
+
+% Inclusão de seções do trabalho
+
+\makeindex
+\begin{document}
+\frenchspacing
+\include{src/pre-textuais}
+\textual
+\include{src/introducao}
+\include{src/estagio-supervisionado}
+\include{src/fundamentacao-teorica}
+%\include{src/trabalhos-relacionados}
+%\include{src/metodologia}
+%\include{src/desenvolvimento}
+\phantompart
+\include{src/pos-textuais}
+\end{document}
