@@ -1,7 +1,7 @@
 \chapter{Atividades desenvolvidas}
 \label{cap:atividades-desenvolvidas}
 
-As atividades desenvolvidas durante o período do Estágio Supervisionado são descritas nesta seção. Primeiramente, uma aplicação construída para migrar dados de uma banco para outro por meio da linguagem Java é descrita, fazendo uso de conceitos apresentados na Seção~\ref{sec:java}. Posteriormente, um projeto utilizando o \textit{framework} Angular é apresentado, fazendo uso dos conceitos de UI/UX apresentados na Seção~\ref{sec:ui-e-ux}.
+As atividades desenvolvidas durante o período do Estágio Supervisionado são descritas nesta seção. Primeiramente, uma aplicação construída para migrar dados de uma banco para outro por meio da linguagem Java é descrita, fazendo uso de conceitos apresentados na Seção~\ref{sec:java}. Posteriormente, um projeto utilizando o \textit{framework} Angular é apresentado, fazendo uso dos conceitos de UI apresentados na Seção~\ref{sec:ui}.
 
 \section{Migração de bancos de dados em Java}
 \label{sec:java-atividades}
@@ -30,7 +30,15 @@ Finalmente, a última etapa da \textit{pipeline} de migração do dados é respo
 
 No desenvolvimento do AC-JDBM foram utilizados diversos conceitos de orientação a objetos, de padrões de projeto e boas práticas de programação.  A criação do projeto como uma \textit{pipeline}, a manipulação de interfaces ao invés de tipos concretos, o encapsulamento dos dados e a separação de responsabilidades pelas classes ao longo do projeto são algumas das características que contribuíram não só para o sucesso da aplicação, mas também para o aprendizado do autor na utilização da linguagem Java aplicada ao \textit{backend} de sistemas.
 
-\section{Desenvolvimento de interfaces e experiências de usuário}
-\label{sec:ui-ux-atividades}
+\section{Desenvolvimento de interfaces de usuário em uma aplicação Web}
+\label{sec:ui-atividades}
 
-A ser escrita.
+A fim de promover um produto de um dos clientes da empresa (não revelado por motivos confidenciais), desenvolveu-se um site responsivo fazendo uso do \textit{framework} AngularJS. O início do desenvolvimento das interfaces dá-se com o recebimento do design da interface por uma empresa terceirizada de design. Em posse das telas, é possível iniciar o desenvolvimento do site, construindo elementos para abrigar os elementos presentes nas telas. Inicialmente, os elementos são construídos de maneira estática, ou seja, fazendo uso somente de HTML e CSS, sendo este último utilizado por meio do SASS.
+
+A preocupação em fazer um site responsivo e de comportamento priorizado para dispositivos móveis (\textit{mobile-first}) ocorre desde o estágio de elaboração do design das interfaces, dado que são enviadas telas correspondentes a como o site deve ser exibido em telas de tamanho \textit{desktop}, \textit{tablet} e \textit{mobile}. Entretanto, ao invés de declarar o mesmo elemento para cada tamanho de tela, faz-se uso das \textit{media queries} em CSS para adequar o estilo do elemento de acordo com a tela do usuário, evitando repetição de código e aumentando a facilidade de manutenção e de mudança do mesmo.
+
+Com algumas das interfaces desenvolvidas estaticamente, é então dado início à elaboração da lógica e dos controladores em JavaScript que irão dar dinamismo ao site. Cada seção do site possui um controlador próprio, e é possível injetar dados presentes nesse controlador para serem exibidos na interface. Além disso, em algumas seções do site, faz-se o uso de arquivos de extensão \verb|JSON| para declarar informações que serão exibidas ao invés de programá-las diretamente no controlador da seção, ou no HTML em si. O controlador da seção recebe o arquivo \verb|JSON| por meio de um Serviço, que por sua vez localiza o arquivo presente em uma das pastas do projeto.
+
+Dentre outras ferramenta do AngularJS que foram utilizadas durante o desenvolvimento do site estão inclusas as diretivas, que atuam a fim de adicionar comportamento à algumas seções do site. Além dessas seções poderem ser reutilizadas ao longo de outras partes do projeto, as diretivas podem ser ligadas a um determinado elemento da página de três maneiras diferentes: por meio de uma classe, atributo ou por meio de uma \textit{tag} específica.
+
+Diversos conceitos de AngularJS e desenvolvimento de UI foram utilizados ao longo do projeto, buscando também fazer uso de boas práticas de programação ao longo do processo. Dessa forma, o projeto contribuiu para que o autor adquirisse experiência não só na utilização do \textit{framework} AngularJS, mas também no desenvolvimento \textit{frontend} de sistemas em geral.
